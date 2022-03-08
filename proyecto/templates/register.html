@@ -1,0 +1,183 @@
+//templates/register.html
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>Register</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+  <!-- Google Fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+ </head>
+ <body style="background-color:#ccc;">
+  <nav class="navbar navbar-light" style="background-color: #386AAC;">
+    <a class="navbar-brand" href="/" style="text-align:center;">  <h1 style="font-size: 18px",align="center">  Control de Personal DSDSC </h1></a>
+  </nav>
+ <div class="container">
+   <div class="row main">
+    <div class="main-login main-center">
+    <p align="center"><h5 align="center">Registrar Nuevo Funcionario</h5></p>
+     <form action="{{ url_for('register') }}" method="post" autocomplete="off"> 
+
+      <div class="form-group">
+       <label for="tipo_documento" class="cols-sm-2 control-label">Tipo de Documento</label>
+       <div class="cols-sm-10">
+        <div class="input-group">
+         <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+         <input type="text" class="form-control" name="tipo_documento" id="tipo_documento"  placeholder="Tipo de documento"/>
+        </div>
+       </div>
+      </div>
+
+      <div class="form-group">
+       <label for="documento" class="cols-sm-2 control-label">Documento</label>
+       <div class="cols-sm-10">
+        <div class="input-group">
+         <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+         <input type="text" class="form-control" name="documento" id="documento"  placeholder="Introduzca tu documento"/>
+        </div>
+       </div>
+      </div>
+  
+      <div class="form-group">
+       <label for="nombre_1" class="cols-sm-2 control-label">Primer Nombre </label>
+       <div class="cols-sm-10">
+        <div class="input-group">
+         <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+         <input type="text" class="form-control" name="nombre_1" id="nombre_1" placeholder="Introduzca tu primer nombre" required>
+        </div>
+       </div>
+      </div>
+  
+      <div class="form-group">
+       <label for="nombre_2" class="cols-sm-2 control-label">Segundo Nombre</label>
+       <div class="cols-sm-10">
+        <div class="input-group">
+         <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+         <input type="text" class="form-control" name="nombre_2" id="nombre_2" placeholder="Introduzca tu segundo nombre" required>
+        </div>
+       </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="apellido_1" class="cols-sm-2 control-label">Primer Apellido</label>
+        <div class="cols-sm-10">
+         <div class="input-group">
+          <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+          <input type="text" class="form-control" name="apellido_1" id="apellido_1" placeholder="Introduzca tu primer apellido" required>
+         </div>
+        </div>
+      </div>
+
+
+      <div class="form-group">
+        <label for="apellido_2" class="cols-sm-2 control-label">Segundo Apellido</label>
+        <div class="cols-sm-10">
+         <div class="input-group">
+          <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+          <input type="text" class="form-control" name="apellido_2" id="apellido_2" placeholder="Introduzca tu segundo apellido" required>
+         </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="fecha_nacimiento" class="cols-sm-2 control-label">Fecha de Nacimiento</label>
+        <div class="cols-sm-10">
+         <div class="input-group">
+          <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+          <input type="date" class="form-control" name="fecha_nacimiento" id="fecha_nacimiento" placeholder="Seleccione Su Fecha de Nacimiento" required>
+         </div>
+        </div>
+      </div>
+
+
+      <div class="form-group">
+        <label for="genero" class="cols-sm-2 control-label">Genero</label>
+        <div class="cols-sm-10">
+         <div class="input-group">
+          <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+          <input type="text" class="form-control" name="genero" id="genero" placeholder="Digite Su Genero" required>
+         </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="telefono" class="cols-sm-2 control-label">Telefono/Celular</label>
+        <div class="cols-sm-10">
+         <div class="input-group">
+          <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+          <input type="text" class="form-control" name="telefono" id="telefono" placeholder="Digite su numero Telefonico" required>
+         </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="estado_funcionario" class="cols-sm-2 control-label">Estado Funcionario </label>
+        <div class="cols-sm-10">
+         <div class="input-group">
+          <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+          <input type="text" class="form-control" name="estado_funcionario" id="estado_funcionario" placeholder="Digite el estado del funcionario" required>
+         </div>
+        </div>
+      </div>
+
+      
+      <div class="form-group">
+        <label for="username" class="cols-sm-2 control-label">Username </label>
+        <div class="cols-sm-10">
+         <div class="input-group">
+          <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+          <input type="text" class="form-control" name="username" id="username" placeholder="Digite el nombre de usuario" required>
+         </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="password" class="cols-sm-2 control-label">Password</label>
+        <div class="cols-sm-10">
+         <div class="input-group">
+          <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+          <input type="password" class="form-control" name="password" placeholder="Password" id="password" required  placeholder="Enter your Password"/>
+         </div>
+        </div>
+       </div>
+
+       <div class="form-group">
+        <label for="email" class="cols-sm-2 control-label">Correo</label>
+        <div class="cols-sm-10">
+         <div class="input-group">
+          <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+          <input type="email" class="form-control" name="email" id="email"  placeholder="Enter your Email"/>
+         </div>
+        </div>
+       </div>
+
+      <div class="form-group ">
+        {% with messages = get_flashed_messages()  %}
+        {% if messages %}
+        {% for message in messages %}
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+          {{ message }}
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+       <input type="submit" value="Guardar" class="form-control btn btn-primary " name="">
+       <p style="padding:5px;">
+       <a href="{{ url_for('login') }}" class="btn btn-warning ">Login</a></p>
+        
+      </div>
+        
+     </form>
+    </div>
+   </div>
+  </div>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>  
+ </body>
+</html>
